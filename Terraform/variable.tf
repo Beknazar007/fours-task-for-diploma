@@ -1,12 +1,20 @@
-variable "account_name" {}
 
-variable "environment" {}
 
-variable "aws_region" {}
+variable "environment" {
+  description = "Environment name"
+}
 
-variable "vpc_name" {}
+variable "aws_region" {
+  description = "Region"
+}
 
-variable "vpc_network_cidr" {}
+variable "vpc_name" {
+  description = "Virtual private network name"
+}
+
+variable "vpc_network_cidr" {
+  description = "CIDR"
+}
 
 variable "resource_availability_zones" {
   type = list(string)
@@ -21,7 +29,7 @@ variable "resource_availability_zones" {
 ###############################################################################
 variable "cluster_name" {
   type        = string
-  description = "  EKS cluster name"
+  description = "EKS cluster name"
 }
 variable "cluster_version" {
   description = "Kubernetes `<major>.<minor>` version to use for the EKS cluster (i.e.: `1.27`)"

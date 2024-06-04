@@ -1,8 +1,8 @@
-account_name                = "dev"
+
 environment                 = "dev"
 aws_region                  = "us-east-1"
 vpc_name                    = "dev-vpc"
-vpc_network_cidr            = "10.81.32.0/20"
+vpc_network_cidr            = "10.0.7.0/16"
 resource_availability_zones = ["us-east-1a", "us-east-1b"]
 
 
@@ -11,10 +11,10 @@ resource_availability_zones = ["us-east-1a", "us-east-1b"]
 #Cluster 1
 ##############################################################################
 cluster_name                    = "cluster"
-cluster_version                 = "1.27"
-vpc_cni_version                 = "v1.15.0-eksbuild.2"
-coredns_version                 = "v1.10.1-eksbuild.4"
-kube-proxy_version              = "v1.27.1-eksbuild.1"
+cluster_version                 = "1.29"
+vpc_cni_version                 = "v1.18.1-eksbuild.3"
+coredns_version                 = "v1.11.1-eksbuild.9"
+kube-proxy_version              = "v1.29.1-eksbuild.2"
 cluster_endpoint_private_access = true
 cluster_endpoint_public_access  = true
 create_cloudwatch_log_group     = false
@@ -23,7 +23,7 @@ node_groups_instance_types      = "t3.medium"
 node_groups_capacity_type       = "ON_DEMAND"
 node_groups_disk_size           = 50
 node_groups_min_size            = 1
-node_groups_max_size            = 8
+node_groups_max_size            = 5
 node_groups_desired_size        = 2
 cluster_security_group_additional_rules = {
   egress1 = {
