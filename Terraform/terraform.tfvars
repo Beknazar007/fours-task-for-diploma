@@ -2,7 +2,7 @@
 environment                 = "dev"
 aws_region                  = "us-east-1"
 vpc_name                    = "dev-vpc"
-vpc_network_cidr            = "10.0.7.0/16"
+vpc_network_cidr            = "10.0.0.0/16"
 resource_availability_zones = ["us-east-1a", "us-east-1b"]
 
 
